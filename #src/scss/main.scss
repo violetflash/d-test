@@ -15,6 +15,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
+  letter-spacing: 1px;
   line-height: 26px;
   color: $blue-1;
   background-color: $white;
@@ -45,7 +46,7 @@ body {
 @import "../components/global";
 @import "../components/header/header";
 @import "../components/main/main";
-//@import "../components/modal/modal";
+@import "../components/services/services";
 //@import "../components/breadcrumbs/breadcrumbs";
 //@import "../components/product/product";
 //@import "../components/tabs/tabs";
