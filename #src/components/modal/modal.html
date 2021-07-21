@@ -1,0 +1,539 @@
+<div class="hystmodal" id="call-request" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <h1 class="modal__title">Заказать обратный звонок</h1>
+
+        <form class="modal__request request">
+          <label class="request__label">
+            <input class="request__input request__input--tel" type="tel" name="call request" placeholder="Ваш номер телефона"
+                   autocomplete="off" required>
+          </label>
+          <div class="request__options">
+            <label class="checkbox">
+              <input class="checkbox__input" type="radio" name="time" checked>
+              <span class="checkbox__text">сейчас</span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input js-time" type="radio" name="time">
+              <span class="checkbox__text">точное время</span>
+            </label>
+          </div>
+          <label class="request__time">
+            <textarea class="request__textarea" name="Время звонка" placeholder="Информация о времени звонка" disabled></textarea>
+          </label>
+          <button class="request__btn" type="submit">Заказать
+            <svg class="request__btn-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 5.5L28 5.5M28 5.5L23.3714 1M28 5.5L23.3714 10" stroke="white" stroke-width="2"/>
+            </svg>
+          </button>
+          <p class="request__policy">Нажимая кнопку "Заказать", я соглашаюсь с
+            <a class="request__policy-link" href="">правилами</a>
+            использования персональных данных.</p>
+        </form>
+        <p class="modal__text">Или позвоните нам по одному из номеров:</p>
+        <div class="modal__contacts contacts">
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:83852332211">8 (3852) 33-22-11</a>
+          </div>
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:88007001579">8-800-700-15-79</a>
+            <p class="contacts__text">Бесплатно по России</p>
+          </div>
+        </div>
+        <a class="modal__link" href="" data-hystmodal="#message-us"><span>Отправить нам сообщение</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="message-us" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <h1 class="modal__title">Отправить нам сообщение</h1>
+
+        <form class="modal__request request">
+          <label class="request__label">
+            <input class="request__input" type="text" name="Имя" placeholder="Ваше имя" autocomplete="off" required>
+          </label>
+          <label class="request__label">
+            <input class="request__input" type="email" name="Email" placeholder="Ваш Email" autocomplete="off" required>
+          </label>
+          <label class="request__message">
+            <textarea class="request__textarea" name="Текст сообщения" placeholder="Ваше сообщение" required></textarea>
+          </label>
+          <button class="request__btn" type="submit">Отправить
+            <svg class="request__btn-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 5.5L28 5.5M28 5.5L23.3714 1M28 5.5L23.3714 10" stroke="white" stroke-width="2"/>
+            </svg>
+          </button>
+          <p class="request__policy">Нажимая кнопку "Отправить", я соглашаюсь с
+            <a class="request__policy-link" href="">правилами</a>
+            использования персональных данных.</p>
+        </form>
+        <p class="modal__text">Или позвоните нам по одному из номеров:</p>
+        <div class="modal__contacts contacts">
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:83852332211">8 (3852) 33-22-11</a>
+          </div>
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:88007001579">8-800-700-15-79</a>
+            <p class="contacts__text">Бесплатно по России</p>
+          </div>
+        </div>
+        <a class="modal__link" href="" data-hystmodal="#call-request"><span>Заказать звонок</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="proposal-request" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <h1 class="modal__title">Запрос коммерческого предложения</h1>
+
+        <form class="modal__request request">
+          <label class="request__label">
+            <input class="request__input" type="text" name="Имя" placeholder="Ваше имя" autocomplete="off" required>
+          </label>
+          <label class="request__label">
+            <input class="request__input" type="email" name="Email" placeholder="Ваш Email" autocomplete="off" required>
+          </label>
+          <label class="request__message">
+            <textarea class="request__textarea" name="Запрос коммерческого предложения" placeholder="Ваше сообщение" required></textarea>
+          </label>
+          <div class="filter">
+            <label class="filter__label">
+              Товар:
+              <select class="select-disabled">
+                <option>Котел КВМ-1,1</option>
+                <option>Котел КВМ-1,2</option>
+                <option>Котел КВМ-1,3</option>
+              </select>
+            </label>
+          </div>
+          <div class="filter">
+            <div class="filter__options">
+              <div class="filter__select-box">
+                <label class="filter__label">
+                  Топливо
+                  <select class="filter__select">
+                    <option>Дерево</option>
+                    <option>Каменный уголь</option>
+                    <option>Бурый уголь</option>
+                    <option>Газ</option>
+                    <option>Мазут</option>
+                    <option>Дизель</option>
+                  </select>
+                </label>
+                <label class="filter__label">
+                  Мощность
+                  <select class="filter__select">
+                    <option>2.5 кВт</option>
+                    <option>3 кВт</option>
+                    <option>3,5 кВт</option>
+                  </select>
+                </label>
+                <label class="filter__label">
+                  Вид топки
+                  <select class="filter__select">
+                    <option>Механическая ТШПМ</option>
+                    <option>Ручная колосниковая</option>
+                    <option>Ручная РПК</option>
+                    <option>Механическая ТЛПХ</option>
+                    <option>Полумеханическая ЗП РПК</option>
+                    <option>Механическая ТЛЗМ</option>
+                    <option>ОУР</option>
+                  </select>
+                </label>
+                <label class="filter__label">
+                  Тяга
+                  <select class="filter__select">
+                    <option>Уравновешенная</option>
+                    <option>Естественая</option>
+                    <option>Принудительная (с наддувом)</option>
+                  </select>
+                </label>
+              </div>
+              <label class="filter__label">Отапливаемый объем помещения, м3:
+                <input class="filter__input" type="text" name="Отапливаемый объем помещения">
+              </label>
+              <label class="filter__label">Регион установки котла:
+                <input class="filter__input" type="text" name="Отапливаемый объем помещения">
+              </label>
+              <p class="filter__caption">Тип отапливаемого помещения:</p>
+              <div class="filter__checkboxes">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">административное здание</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">жилое здание</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">производственный цех</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">больница, поликлиника</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">склад</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">теплица</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">детский сад, школа</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">ангар</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">кафе, ресторан</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">магазин</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="request__btn" type="submit">Отправить
+            <svg class="request__btn-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 5.5L28 5.5M28 5.5L23.3714 1M28 5.5L23.3714 10" stroke="white" stroke-width="2"/>
+            </svg>
+          </button>
+          <p class="request__policy">Нажимая кнопку "Отправить", я соглашаюсь с
+            <a class="request__policy-link" href="">правилами</a>
+            использования персональных данных.</p>
+        </form>
+        <p class="modal__text">Или позвоните нам по одному из номеров:</p>
+        <div class="modal__contacts contacts">
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:83852332211">8 (3852) 33-22-11</a>
+          </div>
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:88007001579">8-800-700-15-79</a>
+            <p class="contacts__text">Бесплатно по России</p>
+          </div>
+        </div>
+        <a class="modal__link" href="" data-hystmodal="#call-request"><span>Заказать звонок</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="discount-request" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <h1 class="modal__title">Запрос скидки</h1>
+
+        <form class="modal__request request">
+          <label class="request__label">
+            <input class="request__input" type="text" name="Имя" placeholder="Ваше имя" autocomplete="off" required>
+          </label>
+          <label class="request__label">
+            <input class="request__input" type="email" name="Email" placeholder="Ваш Email" autocomplete="off" required>
+          </label>
+          <label class="request__message">
+            <textarea class="request__textarea" name="Запрос скидки" placeholder="Ваше сообщение" required></textarea>
+          </label>
+          <div class="filter">
+            <label class="filter__label">
+              Товар:
+              <select class="select-disabled">
+                <option>Котел КВМ-1,1</option>
+                <option>Котел КВМ-1,2</option>
+                <option>Котел КВМ-1,3</option>
+              </select>
+            </label>
+          </div>
+          <button class="request__btn" type="submit">Отправить
+            <svg class="request__btn-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 5.5L28 5.5M28 5.5L23.3714 1M28 5.5L23.3714 10" stroke="white" stroke-width="2"/>
+            </svg>
+          </button>
+          <p class="request__policy">Нажимая кнопку "Отправить", я соглашаюсь с
+            <a class="request__policy-link" href="">правилами</a>
+            использования персональных данных.</p>
+        </form>
+        <p class="modal__text">Или позвоните нам по одному из номеров:</p>
+        <div class="modal__contacts contacts">
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:83852332211">8 (3852) 33-22-11</a>
+          </div>
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:88007001579">8-800-700-15-79</a>
+            <p class="contacts__text">Бесплатно по России</p>
+          </div>
+        </div>
+        <a class="modal__link" href="" data-hystmodal="#call-request"><span>Заказать звонок</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="questionnaire" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <h1 class="modal__title">Опросный лист на водогрейный котел</h1>
+
+        <form class="modal__request request">
+          <label class="request__label">
+            <input class="request__input" type="text" name="Имя" placeholder="Ваше имя" autocomplete="off" required>
+          </label>
+          <label class="request__label">
+            <input class="request__input" type="email" name="Email" placeholder="Ваш Email" autocomplete="off" required>
+          </label>
+          <label class="request__message">
+            <textarea class="request__textarea" name="Запрос коммерческого предложения" placeholder="Ваше сообщение" required></textarea>
+          </label>
+          <div class="filter">
+            <div class="filter__options">
+              <div class="filter__select-box">
+                <label class="filter__label">
+                  Топливо
+                  <select class="filter__select">
+                    <option>Дерево</option>
+                    <option>Каменный уголь</option>
+                    <option>Бурый уголь</option>
+                    <option>Газ</option>
+                    <option>Мазут</option>
+                    <option>Дизель</option>
+                  </select>
+                </label>
+                <label class="filter__label">
+                  Мощность
+                  <select class="filter__select">
+                    <option>2.5 кВт</option>
+                    <option>3 кВт</option>
+                    <option>3,5 кВт</option>
+                  </select>
+                </label>
+                <label class="filter__label">
+                  Вид топки
+                  <select class="filter__select">
+                    <option>Механическая ТШПМ</option>
+                    <option>Ручная колосниковая</option>
+                    <option>Ручная РПК</option>
+                    <option>Механическая ТЛПХ</option>
+                    <option>Полумеханическая ЗП РПК</option>
+                    <option>Механическая ТЛЗМ</option>
+                    <option>ОУР</option>
+                  </select>
+                </label>
+                <label class="filter__label">
+                  Тяга
+                  <select class="filter__select">
+                    <option>Уравновешенная</option>
+                    <option>Естественая</option>
+                    <option>Принудительная (с наддувом)</option>
+                  </select>
+                </label>
+              </div>
+              <label class="filter__label">Отапливаемый объем помещения, м3:
+                <input class="filter__input" type="text" name="Отапливаемый объем помещения">
+              </label>
+              <label class="filter__label">Регион установки котла:
+                <input class="filter__input" type="text" name="Отапливаемый объем помещения">
+              </label>
+              <p class="filter__caption">Тип отапливаемого помещения:</p>
+              <div class="filter__checkboxes">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">административное здание</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">жилое здание</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">производственный цех</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">больница, поликлиника</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">склад</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">теплица</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">детский сад, школа</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">ангар</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">кафе, ресторан</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="Допы">
+                  <span class="checkbox__text">магазин</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="request__btn" type="submit">Отправить
+            <svg class="request__btn-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 5.5L28 5.5M28 5.5L23.3714 1M28 5.5L23.3714 10" stroke="white" stroke-width="2"/>
+            </svg>
+          </button>
+          <p class="request__policy">Нажимая кнопку "Отправить", я соглашаюсь с
+            <a class="request__policy-link" href="">правилами</a>
+            использования персональных данных.</p>
+        </form>
+        <p class="modal__text">Или позвоните нам по одному из номеров:</p>
+        <div class="modal__contacts contacts">
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:83852332211">8 (3852) 33-22-11</a>
+          </div>
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:88007001579">8-800-700-15-79</a>
+            <p class="contacts__text">Бесплатно по России</p>
+          </div>
+        </div>
+        <a class="modal__link" href="" data-hystmodal="#call-request"><span>Заказать звонок</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="hystmodal" id="call" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <div class="modal__contacts contacts">
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:83852332211">8 (3852) 33-22-11</a>
+          </div>
+          <div class="contacts__item">
+            <a class="contacts__phone" href="tel:88007001579">8-800-700-15-79</a>
+            <p class="contacts__text">Бесплатно по России</p>
+          </div>
+        </div>
+        <a class="modal__link" href="" data-hystmodal="#call-request"><span>Заказать звонок</span></a>
+        <a class="modal__link" href="" data-hystmodal="#message-us"><span>Отправить нам сообщение</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="buy" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal">
+        <a class="modal__logo" href="">
+          <img src="images/icons/logo.svg" alt="Энергия-М">
+        </a>
+        <h1 class="modal__title">Модульная котельная мощностью 300 кВт</h1>
+
+        <div class="modal__purchase-info purchase-info">
+          <p class="purchase-info__item purchase-info__stock">
+            <span class="purchase-info__stock-outstock">Нет в наличии.</span>
+            <span class="purchase-info__stock-available">В наличии на складе:</span>
+            <span class="purchase-info__city">Петропавловск-Камчатский</span></p>
+          <p class="purchase-info__item purchase-info__payment">Безналичный расчет</p>
+          <p class="purchase-info__item purchase-info__delivery">Самовывоз или доставка ТК до пункта назначения во все регионы</p>
+        </div>
+        <form class="modal__buy">
+          <div class="modal__product product-modal">
+            <div class="product-modal__image">
+              <img src="images/products/01.jpg" alt="Котел">
+            </div>
+            <div class="product-modal__info">
+              <div class="product-modal__amount amount">
+                <div class="amount__button amount__button--minus"></div>
+                <input type="text" class="amount__input" value="1">
+                <div class="amount__button amount__button--plus"></div>
+              </div>
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" name="Купить в лизинг">
+                <span class="checkbox__text">Купить в лизинг</span>
+              </label>
+              <div class="modal__price-box">
+                <p class="modal__price-text">Цена с НДС за котел</p>
+                <div class="modal__price rub">2 300 000</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__request request">
+            <label class="request__label">
+              <input class="request__input" type="tel" name="request-call" placeholder="Номер телефона">
+              <button class="request__btn" type="submit">
+                <svg class="request__btn-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 5.5L28 5.5M28 5.5L23.3714 1M28 5.5L23.3714 10" stroke="white" stroke-width="2"/>
+                </svg>
+              </button>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="photo" aria-hidden="true">
+  <div class="hystmodal__wrap">
+    <div class="hystmodal__window" role="dialog" aria-modal="true">
+      <button data-hystclose class="hystmodal__close">Закрыть</button>
+      <!-- Ваш HTML код модального окна -->
+      <div class="modal-photo">
+        <img id="modal-photo-img"  src="images/products/06.jpg" alt="Котел КвМ 1,1">
+      </div>
+    </div>
+  </div>
+</div>

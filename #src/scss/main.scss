@@ -1,0 +1,70 @@
+@import "base/mixins";
+@import "base/fonts";
+@import "base/variables";
+
+// <vendors + plugins>=================================
+@import "base/vendors/vendors";
+
+// <Общие параметры>===================================
+@import "base/settings";
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: $fontFamily;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--mainColor);
+  background-color: $white;
+
+  &.js-overflow {
+    overflow: hidden;
+  }
+}
+
+// Оболочка
+.site-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+// Главный контейнер
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $maxWidthContainer + px;
+  width: 100%;
+}
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===============================
+@import "../components/global";
+@import "../components/header/header";
+@import "../components/menu/menu";
+@import "../components/modal/modal";
+@import "../components/breadcrumbs/breadcrumbs";
+@import "../components/product/product";
+@import "../components/tabs/tabs";
+@import "../components/photo/photo";
+@import "../components/accordions/accordions";
+@import "../components/bar/bar";
+@import "../components/similar/similar";
+@import "../components/video/video";
+@import "../components/selection/selection";
+@import "../components/articles/articles";
+@import "../components/callback/callback";
+@import "../components/virtual/virtual";
+@import "../components/documents/documents";
+@import "../components/about/about";
+@import "../components/instagram/instagram";
+@import "../components/viewed/viewed";
+@import "../components/map/map";
+
+@import "../components/footer/footer";
+
+
+
+// ===============================================================================

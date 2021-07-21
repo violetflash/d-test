@@ -1,0 +1,137 @@
+.callback {
+  background-color: $grey;
+  margin: 0 0 100px;
+  
+  @media (max-width: $md3+px) {
+    margin: 0 0 50px;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 30px;
+    //height: 124px;
+    background-image: url('../images/icons/callback-bg.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+
+    @media (max-width: $md3+px) {
+      padding: 15px;
+    }
+
+    @media (max-width: 550px) {
+      margin: 0 -15px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      //bottom: -20px;
+      width: 150px;
+      height: 110%;
+      transform: rotate(180deg) translateX(70%);
+      background-image: url('../images/icons/callback-chevron.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      z-index: 1;
+
+      @media (max-width: 850px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      left: unset;
+      right: 0;
+      transform: rotate(180deg) translateX(-20%);
+    }
+  }
+  
+  .call-request {
+    z-index: 2;
+
+    &__body {
+      z-index: 2;
+    }
+
+    @media (max-width: 850px) {
+      display: block;
+    }
+
+    &__text {
+      @media (max-width: 850px) {
+        margin: 0 0 20px;
+        max-width: 100%;
+      }
+
+      @media (max-width: $md3+px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 550px) {
+        font-size: 14px;
+      }
+    }
+
+    &__input,
+    &__btn {
+      @media (max-width: $md3+px) {
+        height: 40px;
+      }
+    }
+  }
+}
+
+.call-request {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    display: block;
+    margin: 0 50px 0 0;
+    font-weight: 700;
+    max-width: 660px;
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__input {
+    height: 60px;
+    line-height: 60;
+    padding: 0 20px;
+    outline: transparent;
+    border: none;
+
+    &::placeholder {
+      font-weight: 600;
+      color: $mainColor-light;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 57px;
+    background: linear-gradient(135deg, #E62817 0%, #F26118 100%);
+
+
+    &:hover {
+      .call-request__arrow {
+        transform: scale(1.1) translateX(4px);
+      }
+    }
+  }
+
+  &__arrow {
+    width: 30px;
+    height: 10px;
+    transition: all 0.2s;
+  }
+}
