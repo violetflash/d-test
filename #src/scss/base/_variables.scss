@@ -4,24 +4,31 @@
   --mainColor-light: rgba(#252525, 0.5);
   --accent: #f23d18;
   --grey: #f4f4f4;
+  --gradient: rgba(#98C3E8, 0.2);
 }
 
 // для спользования режима RGBA
-$mainColor: #252525;
+$blue-1: #1F3F68;
+$blue-2: #316099;
+$blue-3: #356EAD;
+$blue-4: #5A98D0;
+$blue-5: #98C3E8;
+$gradient: rgba($blue-5, 0.2);
+$mainColor: $blue-1;
+$white: #fff;
 $mainColor-hover: #000;
 $mainColor-light: rgba(#252525, 0.5);
 $white: #fff;
-$grey: #f4f4f4;
-$accent: #f23d18;
+
 
 // <Шрифт по умолчанию>========================
-$fontFamily: "ProximaNova", sans-serif;
-$fontFamily2: "Roboto", sans-serif;
+$fontFamily: "Gilroy", sans-serif;
+$fontFamily2: "Galien", sans-serif;
 
 // <Переменные контейнера>=====================
 $minWidth: 320;
 $maxWidth: 1400;
-$maxWidthContainer: 1234;
+$maxWidthContainer: 1230;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;

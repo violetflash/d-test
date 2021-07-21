@@ -1,0 +1,24 @@
+.main {
+  min-height: 600px;
+  background: linear-gradient(0deg, $gradient 8.84%, rgba(152, 195, 232, 0) 31.12%);
+
+  &__title {
+    margin-bottom: 32px;
+    font-family: $fontFamily2;
+    font-size: 64px;
+    line-height: 74px;
+    max-width: 510px;
+  }
+
+  &__text {
+    margin-bottom: 70px;
+    max-width: 400px;
+  }
+
+  &__link {
+    padding: 15px 48px;
+    background-color: $blue-4;
+    color: $white;
+    border-radius: 10px;
+  }
+}

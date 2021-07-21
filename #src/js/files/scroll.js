@@ -1,3 +1,3 @@
-var scroll = new SmoothScroll('a[href*="#"]', {
+const scroll = new SmoothScroll('a[href*="#"]', {
     topOnEmptyHash: false,
 });

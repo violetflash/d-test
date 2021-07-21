@@ -68,7 +68,7 @@ let {src, dest} = require('gulp'),
     browsersync = require("browser-sync").create(),
     fileinclude = require("gulp-file-include"),
     del = require("del"),
-    scss = require("gulp-sass"),
+    scss = require("gulp-sass")(require('sass')),
     autoprefixer = require("gulp-autoprefixer"),
     group_media = require("gulp-group-css-media-queries"),
     clean_css = require("gulp-clean-css"),
@@ -138,9 +138,6 @@ function cssLibs() {
     //библиотека из css-стилей плагинов
     return src([
         "node_modules/normalize.css/normalize.css",
-        // "node_modules/choices.js/public/assets/styles/base.min.css",
-        // "node_modules/nouislider/distribute/nouislider.css"
-
     ])
         .pipe(sourcemaps.init())
         .pipe(concat("libs.css")) //склеиваем их в один файл с указанным именем

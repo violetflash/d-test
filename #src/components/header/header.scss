@@ -1,417 +1,65 @@
 .header {
-
-  @media (max-width: 600px) {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(135deg, #E62817 0%, #F26118 100%);
-    }
-  }
-  &__burger {
-    //display: none;
-    width: 25px;
-    height: auto;
-
-    span {
-      margin: 0 0 6px;
-      width: 25px;
-      height: 3px;
-      background-color: $accent;
-
-      &:last-child {
-        margin: 0;
-      }
-    }
-  }
-}
-
-.top-panel {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-  @media (max-width: $md3+px) {
-    justify-self: flex-start;
-  }
+  margin-top: 48px;
 
   &__logo {
-    margin: 0 26px 0 0;
-    flex: 0 0 214px;
-    
-    @media (max-width: $md3+px) {
-      margin: 0 auto 0 0;
-    }
-
-    @media (max-width: 550px) {
-      flex-basis: 160px;
-    }
+    width: 48px;
+    height: 48px;
   }
 
-  &__address {
-    margin: 0 26px 0 0;
-    font-style: normal;
-    color: $mainColor-light;
-    white-space: nowrap;
+  &__menu-btn {
+    position: relative;
+    //margin: 50px auto;
+    width: 24px;
+    height: 16px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
 
     span {
-      position: relative;
+      position: absolute;
       display: block;
-      padding: 0 0 0 17px;
-      color: var(--mainColor);
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 7px;
-        height: 12px;
-        background: url('../images/icons/map-marker-small.svg') center no-repeat;
-      }
-    }
-
-    @media (max-width: 1050px) {
-      order: 3;
-      font-size: 0;
-      flex: 0 0 45px;
-      height: 45px;
-      background: url('../images/icons/map-marker.svg') center no-repeat;
-
-      span {
-        display: none;
-      }
-    }
-
-    @media (max-width: $md3+px) {
-      margin: 0 10px 0 0;
-    }
-
-    @media (max-width: 600px) {
-      display: none;
-    }
-  }
-
-  &__search-btn {
-    display: none;
-    flex: 0 0 45px;
-    height: 45px;
-    background: url('../images/icons/magnifier-big.svg') center no-repeat;
-
-    @media (max-width: $md3+px) {
-      display: block;
-      margin: 0 10px 0 0;
-      order: 2;
-    }
-
-    @media (max-width: 400px) {
-      //display: none;
-    }
-
-    &.js-active {
-      background: url('../images/icons/cancel.svg') center no-repeat;
-    }
-  }
-
-  &__form {
-    position: absolute;
-    //display: none;
-    visibility: hidden;
-    left: 0;
-    top: 0;
-    bottom: 4px;
-    width: calc(100% - 210px);
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transform: translateX(-100px);
-
-    @media (min-width: 769px) {
-      display: none;
-    }
-
-    @media (max-width: 600px) {
-      width: calc(100% - 155px);
-    }
-
-    @media (max-width: 400px) {
-      width: calc(100% - 110px);
-    }
-
-    &.js-opened {
-      visibility: visible;
+      height: 3px;
+      width: 100%;
+      background-color: $blue-3;
+      border-radius: 9px;
       opacity: 1;
-      transform: translateX(0);
-    }
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
 
-    .search-form {
-      height: 100%;
-    }
+      &:nth-child(1) {
+        top: 0;
+      }
 
-    .search-form__btn {
-      height: 100%;
-      margin: 0 10px 0 0;
-    }
+      &:nth-child(2) {
+        top: 7px;
+      }
 
-    .search-form__btn--mic {
-      right: 50px;
-      margin: 0 5px 0 0;
-    }
-
-    .search-form__input {
-      border: none;
-      padding: 10px 95px 10px 0;
-      margin: 0 0 0 -5px;
-      border-right: 4px solid $grey;
-      height: 100%;
-      font-size: 16px;
-
-      &::placeholder {
-        font-size: 16px;
+      &:nth-child(3) {
+        top: 14px;
       }
     }
 
-    .search-form__icon {
-      width: 28px;
-      height: 28px;
-    }
-  }
+    &.open {
+      span {
+        &:nth-child(1) {
+          top: 7px;
+          transform: rotate(135deg);
+        }
 
-  &__search {
-    flex: 1 0 auto;
-    order: 2;
-    margin: 0 26px 0 0;
+        &:nth-child(2) {
+          opacity: 0;
+          left: -20px;
+        }
 
-    @media (max-width: $md3+px) {
-      display: none;
-    }
-  }
-
-  &__phone {
-    display: none;
-    flex: 0 0 45px;
-    height: 45px;
-    background: url('../images/icons/smartphone.svg') center no-repeat;
-
-    @media (max-width: 900px) {
-      display: block;
-      margin: 0 26px 0 0;
-      order: 4;
-    }
-
-    @media (max-width: $md3+px) {
-      margin: 0 10px 0 0;
-    }
-
-    @media (max-width: 400px) {
-      display: none;
-    }
-  }
-
-  &__contacts {
-    order: 4;
-    margin: 0 26px 0 0;
-
-    .contacts__item {
-      &:first-child {
-        @media (max-width: 1200px) {
-          display: none;
+        &:nth-child(3) {
+          top: 7px;
+          transform: rotate(-135deg);
         }
       }
     }
-    
-
-
-    @media (max-width: 900px) {
-      display: none;
-    }
-
   }
-
-  &__cart {
-
-    @media (max-width: $md3+px) {
-      margin: 0 -15px 0 0;
-    }
-
-    @media (max-width: 600px) {
-      display: none;
-    }
-  }
-
-  &__menu {
-    position: relative;
-    order: 5;
-    display: flex;
-    transition: all 0.3s;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #E62817 0%, #F26118 100%);
-      opacity: 0;
-      transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-      transform: translateX(100%);
-    }
-
-    @media (max-width: 600px) {
-      margin: 0 -15px 0 0;
-    }
-
-    &.js-active {
-      &::before {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  }
-}
-
-.search-form {
-  position: relative;
-
-  &__input {
-    border: 2px solid var(--grey);
-    padding: 15px 35px 15px 19px;
-    font-weight: 600;
-    width: 100%;
-
-    &::placeholder {
-      color: $mainColor-light;
-    }
-  }
-
-  &__btn {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 50px;
-
-    &:hover {
-      .search-form__icon path {
-        fill: $accent;
-      }
-    }
-  }
-
-  &__icon {
-    width: 14px;
-    height: 15px;
-
-    path {
-      transition: all 0.3s ease 0s;
-      fill: #929292;
-    }
-  }
-}
-
-.contacts {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-
-  &__item {
-    position: relative;
-    margin: 0 20px 0 0;
-    padding: 0 0 0 35px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 30px;
-      height: 30px;
-      transform: translateY(-50%);
-      background: url('../images/icons/smartphone.svg') center no-repeat;
-    }
-
-    &:last-child {
-      margin: 0;
-    }
-  }
-
-  &__phone {
-    display: block;
-    font-weight: 700;
-    font-size: 16px;
-  }
-
-  &__text {
-    display: block;
-    color: $mainColor-light;
-  }
-
-  &__request,
-  &__modal {
-    border-bottom: 1px dashed;
-    font-size: 12px;
-    color: var(--accent);
-  }
-}
-
-.cart {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px 15px 10px;
-  background: linear-gradient(135deg, #E62817 0%, #F26118 100%);
-  cursor: pointer;
-
-  &.empty {
-    .cart__count,
-    .cart__total {
-      display: none;
-    }
-  }
-
-  &__icon {
-    width: 35px;
-    height: 31px;
-
-    path {
-      transition: all 0.3s ease 0s;
-    }
-  }
-
-  &__total {
-    display: block;
-    font-weight: 600;
-    color: $white;
-    white-space: nowrap;
-
-    @media (max-width: $md3+px) {
-      display: none;
-    }
-  }
-
-  &__count {
-    position: absolute;
-    display: none;
-    align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 4px;
-    justify-content: center;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    font-weight: 700;
-    background-color: $white;
-
-    @media (max-width: $md3+px) {
-      display: flex;
-    }
-  }
-
 }
