@@ -5,47 +5,72 @@
   .action__bg {
     margin-right: 96px;
     border-radius: 0 200px 0 0;
-    padding: 90px 0 0;
     background-color: $blue-2;
-  }
-
-  &__line-box {
-    margin-right: 197px;
-    border-bottom: 1px solid rgba($white, 0.4);
 
     .container {
-      padding-left: 96px;
+      margin-right: calc((100% - 1230px) /2 - 48px);
+
+      @media (max-width: 1200px) {
+        margin: 0 auto;
+      }
     }
   }
 
   &__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 0 96px 130px;
+    padding: 90px 0 96px 130px;
 
     @media (max-width: 1400px) {
       padding-left: 0;
+    }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      padding-right: 40px;
+    }
+
+    @media (max-width: $md2+px) {
+      padding: 60px 40px 60px 0;
     }
   }
 
   &__title {
     margin-bottom: 32px;
     max-width: 320px;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
   }
 
   &__description {
     max-width: 460px;
     opacity: 0.6;
+
+    @media (max-width: 1200px) {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 200px;
     border-radius: 10px;
     padding: 15px;
     min-width: 220px;
     background-color: $blue-4;
+
+    @media (max-width: $md2+px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $md3+px) {
+      min-width: auto;
+      padding: 15px 40px;
+    }
   }
 }
