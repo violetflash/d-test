@@ -6,12 +6,10 @@
 
   &__content {
     position: relative;
-    margin-left: 130px;
-    padding-bottom: 190px;
-    padding-top: 119px;
+    padding: 119px 0 190px 130px;
 
     @media (max-width: 1400px) {
-      margin-left: 0;
+      padding-left: 0;
     }
 
     @media (max-width: 1120px) {

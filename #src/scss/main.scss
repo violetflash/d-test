@@ -15,8 +15,8 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  letter-spacing: 1px;
   line-height: 26px;
+  letter-spacing: 1px;
   color: $blue-1;
   background-color: $white;
 
@@ -37,17 +37,17 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: $maxWidthContainer + px;
   width: 100%;
+  max-width: $maxWidthContainer + px;
 }
 
 // <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===============================
-
 @import "../components/global";
 @import "../components/header/header";
 @import "../components/main/main";
 @import "../components/services/services";
-//@import "../components/breadcrumbs/breadcrumbs";
+@import "../components/clients/clients";
+
 //@import "../components/product/product";
 //@import "../components/tabs/tabs";
 //@import "../components/photo/photo";
@@ -66,7 +66,5 @@ body {
 //@import "../components/map/map";
 //
 //@import "../components/footer/footer";
-
-
 
 // ===============================================================================
