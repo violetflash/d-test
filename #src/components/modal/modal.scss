@@ -37,6 +37,10 @@
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
   }
+
+  @media (max-width: 1200px) {
+    padding: 25px;
+  }
 }
 
 .modal-form {
@@ -79,6 +83,10 @@
     align-items: center;
     height: 72px;
     transition: all 0.3s ease;
+
+    @media (max-width: 1200px) {
+      height: 40px;
+    }
   }
 
   &__textarea {
