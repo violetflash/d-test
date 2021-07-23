@@ -44,12 +44,30 @@
 }
 
 .modal-form {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  &__close {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 30px;
+    height: 30px;
+
+    @media (max-width: 1200px) {
+      right: -10px;
+      top: -10px;
+    }
+  }
 
   &__title {
     margin-bottom: 48px;
     text-transform: uppercase;
+
+    @media (max-width: $md3+px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__label {
@@ -57,6 +75,10 @@
 
     &--textarea {
       margin-bottom: 6px;
+    }
+
+    @media (max-width: $md3+px) {
+      margin-bottom: 15px;
     }
   }
 
@@ -75,6 +97,10 @@
 
     &::placeholder {
       color: rgba($blue-1, 0.2);
+    }
+
+    @media (max-width: $md3+px) {
+      padding: 0 15px;
     }
   }
 
@@ -96,6 +122,10 @@
 
     &:focus {
       border: 1px solid rgba($blue-3, 0.4);
+    }
+    @media (max-width: $md3+px) {
+      min-height: 100px;
+      padding: 10px 15px;
     }
   }
 

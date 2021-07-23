@@ -161,6 +161,11 @@ const modalClickHandler = (e) => {
           });
     }
   }
+
+  if (target.closest('#close')) {
+    e.preventDefault();
+    closeModal(modal);
+  }
 };
 
 const successBtnHandler = () => {
