@@ -1,6 +1,6 @@
 .footer {
-  background-color: $blue-4;
   color: $white;
+  background-color: $blue-4;
 
   &__bg {
     margin-right: 96px;
@@ -12,6 +12,10 @@
       @media (max-width: 1200px) {
         margin: 0 auto;
       }
+    }
+
+    @media (max-width: $md3+px) {
+      margin-right: 40px;
     }
   }
 
@@ -32,6 +36,10 @@
     @media (max-width: 1400px) {
       padding-left: 0;
     }
+
+    @media (max-width: $md2+px) {
+      padding: 60px 0;
+    }
   }
 
   &__top {
@@ -46,6 +54,15 @@
 
   &__contacts {
     margin-top: 10px;
+    @media (max-width: $md2+px) {
+      order: 2;
+    }
+  }
+
+  &__menu {
+    @media (max-width: $md2+px) {
+      order: 1;
+    }
   }
 
   &__copy {
@@ -56,8 +73,6 @@
 .contacts {
   display: flex;
   flex-direction: column;
-
-
 
   &__logo {
     display: flex;
@@ -72,8 +87,8 @@
     padding-left: 36px;
 
     &::before {
-      position: absolute;
       content: "A.";
+      position: absolute;
       left: 0;
       font-weight: 600;
     }
@@ -86,8 +101,8 @@
   }
 
   &__address {
-    max-width: 264px;
     margin-bottom: 24px;
+    max-width: 264px;
     font-style: normal;
   }
 
@@ -104,22 +119,11 @@
       content: "E.";
     }
   }
-  
-  &__menu {
-    @media (max-width: $md2+px) {
-      order: 1;
-    }
-  }
 }
 
 .footer-menu {
   display: flex;
   margin-left: 100px;
-
-  @media (max-width: $md2+px) {
-    margin: 0 0 60px;
-  }
-
 
   &__column {
     margin-right: 70px;
@@ -127,13 +131,23 @@
     &:last-child {
       margin: 0;
     }
+
+    @media (max-width: $md4+px) {
+      margin: 0 0 30px;
+    }
   }
+
+  @media (max-width: $md2 + px) {
+    margin: 0 0 60px;
+  }
+
+  @media (max-width: $md4+px) {
+    flex-direction: column;
+  }
+
 }
 
 .pages {
-
-
-
   &__item {
     margin-bottom: 16px;
 
