@@ -41,6 +41,11 @@
   }
 }
 
+//lock body
+.js-locked {
+  overflow: hidden;
+}
+
 .pulse {
   &:hover,
   &:focus {

@@ -1,5 +1,7 @@
 
 @@include('../../components/header/header.js', {})
+@@include('../../components/action/action.js', {})
+@@include('../../components/modal/modal.js', {})
 
 const scrollElements = document.querySelectorAll('.js-scroll');
 let throttleTimer = false;
