@@ -46,9 +46,16 @@
   overflow: hidden;
 }
 
+.error {
+  border: 1px solid $error !important;
+}
+
+.valid {
+  border: 1px solid $valid !important;
+}
+
 .pulse {
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: 0 0 0 20px rgba(#fff, 0);
     animation: pulse 1.5s infinite;
   }

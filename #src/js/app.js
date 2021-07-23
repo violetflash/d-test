@@ -1,11 +1,26 @@
 const scene = document.getElementById('scene');
+const overlay = document.getElementById('overlay');
+const modal = document.querySelector('.modal');
 
-const lockBody = () => {
-  document.querySelector('body').classList.add('js-locked');
+
+const lockScreen = () => {
+  document.getElementById('overlay').classList.add('js-active');
+  document.body.classList.add('js-locked');
 };
 
-const unlockBody = () => {
-  document.querySelector('body').classList.remove('js-locked');
+const unlockScreen = () => {
+  document.getElementById('overlay').classList.remove('js-active');
+  document.body.classList.remove('js-locked');
+};
+
+const openModal = () => {
+  lockScreen();
+  modal.classList.add('js-active');
+};
+
+const closeModal = () => {
+  unlockScreen();
+  modal.classList.remove('js-active');
 };
 
 const capitalizer = (str) => {
