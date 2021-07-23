@@ -227,10 +227,7 @@ function css() {
 function jsLibs() {
     return src([
         //подключаем разные js в общую библиотеку.
-        // "node_modules/shave/dist/shave.js",
-        "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.js"
-        // "node_modules/list.js/dist/list.js",
-
+        "node_modules/parallax-js/dist/parallax.min.js"
     ])
         //pipe - функция, внутри которой мы пишем команды для gulp
         .pipe(plumber({ errorHandler: errorHandler }))

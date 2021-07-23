@@ -53,11 +53,15 @@
   }
 
   @media (max-width: 1400px) {
-    padding-left: 0;
+    padding-left: 30px;
   }
 
   @media (max-width: 1200px) {
-    padding: 100px 0;
+    padding: 100px 0 100px 30px;
+  }
+
+  @media (max-width: $md3+px) {
+    padding-left: 0;
   }
 
   @media (max-width: $md2+px) {

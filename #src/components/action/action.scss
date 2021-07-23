@@ -26,7 +26,7 @@
     padding: 90px 0 96px 130px;
 
     @media (max-width: 1400px) {
-      padding-left: 0;
+      padding-left: 30px;
     }
 
     @media (max-width: 1200px) {
@@ -35,7 +35,11 @@
     }
 
     @media (max-width: $md2+px) {
-      padding: 60px 40px 60px 0;
+      padding: 60px 40px 60px 30px;
+    }
+
+    @media (max-width: $md3+px) {
+      padding-left: 0;
     }
   }
 

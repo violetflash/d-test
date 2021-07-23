@@ -19,7 +19,7 @@ $white: #fff;
 $mainColor-hover: #000;
 $mainColor-light: rgba(#252525, 0.5);
 $white: #fff;
-
+$pulseColor: adjust-hue($blue-5, 2deg);
 
 // <Шрифт по умолчанию>========================
 $fontFamily: "Gilroy", sans-serif;

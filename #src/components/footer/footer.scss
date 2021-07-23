@@ -67,6 +67,10 @@
 
   &__copy {
     opacity: 0.4;
+    
+    @media (max-width: $md2+px) {
+      text-align: center;
+    }
   }
 }
 

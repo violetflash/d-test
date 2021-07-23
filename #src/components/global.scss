@@ -40,3 +40,88 @@
     background-size: contain;
   }
 }
+
+.pulse {
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 20px rgba(#fff, 0);
+    animation: pulse 1.5s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 $pulseColor; }
+}
+
+//scrolling
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.scrolled {
+    opacity: 1;
+
+    &.slide-left {
+      animation: slide-in-left 1s ease-in-out both;
+    }
+
+    &.slide-right {
+      animation: slide-in-right 1s ease-in-out both;
+    }
+
+    &.fade-in {
+      animation: fade-in 1s ease-in-out both;
+    }
+
+    &.fade-in-bottom {
+      animation: fade-in-bottom 1s ease-in-out both;
+    }
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
