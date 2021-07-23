@@ -50,6 +50,11 @@
   border: 1px solid $error !important;
 }
 
+.err-animated {
+  transition: all 0.3s;
+  animation: err 0.4s;
+}
+
 .valid {
   border: 1px solid $valid !important;
 }
@@ -135,5 +140,17 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes err {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

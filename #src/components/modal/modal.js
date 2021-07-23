@@ -5,6 +5,8 @@ const textarea = document.getElementById('textarea');
 const submitBtn = document.getElementById('submit-btn');
 const form = document.querySelector('.modal-form');
 const inputs = form.querySelectorAll('input');
+const fields = [...inputs, textarea];
+
 
 modalLabels.forEach(label => {
   label.textContent = capitalizer(label.textContent);
@@ -12,14 +14,23 @@ modalLabels.forEach(label => {
 
 overlay.addEventListener('click', (e) => {
   const target = e.target;
+
   if (!target.closest('.modal')) {
     closeModal();
   }
+
+  if (target.classList.contains('')
 });
 
 //вынести в общий код
 const showError = (node) => {
+  let timeoutId;
   node.classList.add('error');
+  node.classList.add('err-animated');
+  timeoutId = setTimeout(() => {
+    node.classList.remove('err-animated');
+    clearTimeout(timeoutId);
+  }, 1000);
 }
 
 const removeError = (node) => {
@@ -33,6 +44,18 @@ const showValid = (node) => {
 const removeValid = (node) => {
   node.classList.remove('valid');
 }
+
+const modalClickHandler = (e) => {
+  const target = e.target;
+
+  fields.forEach((field) => {
+    if (field.id === target.id) {
+      removeError(target);
+    }
+  })
+};
+
+modal.addEventListener('click', modalClickHandler);
 
 
 const validateName = (e) => {
@@ -75,9 +98,25 @@ const validateEmailInput = (e) => {
       .replace(/\.(?=@)/gi, '');
 };
 
+const validateTextareaInput = (e) => {
+  const target = e.target;
+  target.value = target.value.replace(/\s\s/gi, ' ');
+  // target.value = target.value.trim();
+};
+
+const validateTextareaBlur = (e) => {
+  const target = e.target;
+
+  if (!target.value) {
+    showError(target);
+    return;
+  }
+
+  target.value = target.value.trim();
+};
+
 const submitValidation = () => {
   let result = true;
-  const fields = [...inputs, textarea];
   for (let i = 0; i < fields.length; i++) {
     if (fields[i].classList.contains('error') || !fields[i].value) {
       showError(fields[i]);
@@ -98,10 +137,12 @@ name.addEventListener('blur', validateName);
 name.addEventListener('input', validateNameInput);
 email.addEventListener('blur', checkEmailValidation);
 email.addEventListener('input', validateEmailInput);
+textarea.addEventListener('input', validateTextareaInput);
+textarea.addEventListener('blur', validateTextareaBlur);
 submitBtn.addEventListener('click', submitHandler);
 
-inputs.forEach((input) => {
-  input.addEventListener('click', () => removeError(input));
-})
+// fields.forEach((field) => {
+//   field.addEventListener('click', () => removeError(field));
+// })
 
 
