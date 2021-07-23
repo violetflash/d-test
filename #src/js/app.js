@@ -1,7 +1,5 @@
 const scene = document.getElementById('scene');
 const overlay = document.getElementById('overlay');
-const modal = document.querySelector('.modal');
-
 
 const lockScreen = () => {
   document.getElementById('overlay').classList.add('js-active');
@@ -13,12 +11,12 @@ const unlockScreen = () => {
   document.body.classList.remove('js-locked');
 };
 
-const openModal = () => {
+const openModal = (modal) => {
   lockScreen();
   modal.classList.add('js-active');
 };
 
-const closeModal = () => {
+const closeModal = (modal) => {
   unlockScreen();
   modal.classList.remove('js-active');
 };
@@ -30,6 +28,28 @@ const capitalizer = (str) => {
   });
   return newStr.join(' ');
 };
+
+const showError = (node) => {
+  let timeoutId;
+  node.classList.add('error');
+  node.classList.add('err-animated');
+  timeoutId = setTimeout(() => {
+    node.classList.remove('err-animated');
+    clearTimeout(timeoutId);
+  }, 1000);
+}
+
+const removeError = (node) => {
+  node.classList.remove('error');
+}
+
+const showValid = (node) => {
+  node.classList.add('valid');
+}
+
+const removeValid = (node) => {
+  node.classList.remove('valid');
+}
 
 
 const parallaxInstance = new Parallax(scene);

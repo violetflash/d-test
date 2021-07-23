@@ -1,3 +1,5 @@
+const modal = document.querySelector('.modal');
+const successModal = document.querySelector('.success-modal');
 const modalLabels = document.querySelectorAll('.modal-form__label-text');
 const name = document.getElementById('name');
 const email = document.getElementById('email');
@@ -6,6 +8,7 @@ const submitBtn = document.getElementById('submit-btn');
 const form = document.querySelector('.modal-form');
 const inputs = form.querySelectorAll('input');
 const fields = [...inputs, textarea];
+const preloader = document.querySelector('.modal-form__preloader');
 
 
 modalLabels.forEach(label => {
@@ -16,47 +19,17 @@ overlay.addEventListener('click', (e) => {
   const target = e.target;
 
   if (!target.closest('.modal')) {
-    closeModal();
+    closeModal(modal);
   }
-
-  if (target.classList.contains('')
 });
 
-//вынести в общий код
-const showError = (node) => {
-  let timeoutId;
-  node.classList.add('error');
-  node.classList.add('err-animated');
-  timeoutId = setTimeout(() => {
-    node.classList.remove('err-animated');
-    clearTimeout(timeoutId);
-  }, 1000);
-}
-
-const removeError = (node) => {
-  node.classList.remove('error');
-}
-
-const showValid = (node) => {
-  node.classList.add('valid');
-}
-
-const removeValid = (node) => {
-  node.classList.remove('valid');
-}
-
-const modalClickHandler = (e) => {
-  const target = e.target;
-
-  fields.forEach((field) => {
-    if (field.id === target.id) {
-      removeError(target);
-    }
-  })
+const showPreloader = () => {
+  preloader.classList.add('js-active');
 };
 
-modal.addEventListener('click', modalClickHandler);
-
+const hidePreloader = () => {
+  preloader.classList.remove('js-active');
+};
 
 const validateName = (e) => {
   const target = e.target;
@@ -101,7 +74,6 @@ const validateEmailInput = (e) => {
 const validateTextareaInput = (e) => {
   const target = e.target;
   target.value = target.value.replace(/\s\s/gi, ' ');
-  // target.value = target.value.trim();
 };
 
 const validateTextareaBlur = (e) => {
@@ -127,11 +99,13 @@ const submitValidation = () => {
   return result;
 };
 
-const submitHandler = (e) => {
-  e.preventDefault();
-  submitValidation();
-  console.log(submitValidation());
-};
+const clearErrors = (arr, target) => {
+  arr.forEach((field) => {
+    if (field.id === target.id) {
+      removeError(target);
+    }
+  })
+}
 
 name.addEventListener('blur', validateName);
 name.addEventListener('input', validateNameInput);
@@ -139,10 +113,61 @@ email.addEventListener('blur', checkEmailValidation);
 email.addEventListener('input', validateEmailInput);
 textarea.addEventListener('input', validateTextareaInput);
 textarea.addEventListener('blur', validateTextareaBlur);
-submitBtn.addEventListener('click', submitHandler);
 
-// fields.forEach((field) => {
-//   field.addEventListener('click', () => removeError(field));
-// })
+
+const postData = body => fetch('./server.php', {
+  method: 'POST',
+  body: JSON.stringify(body),
+  headers: {
+    'Content-type': 'application/json'
+  },
+});
+
+const modalClickHandler = (e) => {
+  const target = e.target;
+
+  clearErrors(fields, target);
+
+  if (target.id === 'submit-btn') {
+    e.preventDefault();
+
+    if (submitValidation()) {
+      showPreloader();
+      const formData = new FormData(form);
+      let body = {};
+
+      formData.forEach((val, key) => {
+        body[key] = val;
+      });
+
+      body = JSON.stringify(body);
+      postData(body)
+          .then(response => {
+
+
+            if (response.status !== 200) {
+              throw new Error('Нет ответа от сервера');
+            }
+            closeModal(modal);
+            openModal(successModal);
+
+            setTimeout(() => {
+              closeModal(successModal);
+            }, 5000);
+            form.reset();
+          })
+          .catch(error => {
+            console.error(error);
+          });
+    }
+  }
+};
+
+const successBtnHandler = () => {
+  closeModal(successModal);
+};
+
+modal.addEventListener('click', modalClickHandler);
+successModal.addEventListener('click', successBtnHandler);
 
 
