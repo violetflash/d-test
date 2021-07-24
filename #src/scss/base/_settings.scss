@@ -1,13 +1,12 @@
 html {
-  box-sizing: border-box;
   height: 100%;
-  //scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
 
 img {
@@ -19,7 +18,7 @@ a {
   color: inherit;
 }
 
-a:visited{
+a:visited {
   text-decoration: none;
 }
 
@@ -28,17 +27,13 @@ ul {
   padding: 0;
 }
 
-//.error {
-//  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
-//}
-
 button {
+  outline: transparent;
   border: none;
   padding: 0;
-  color: inherit;
   font-family: inherit;
+  color: inherit;
   background: transparent;
-  outline: transparent;
   cursor: pointer;
 }
 
@@ -50,13 +45,18 @@ input {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
 p {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 // Accessibility?
@@ -65,8 +65,5 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-/*--------------------*/
-

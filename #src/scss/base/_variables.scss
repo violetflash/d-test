@@ -1,13 +1,5 @@
 // цвета сайта
-:root {
-  --mainColor: #252525;
-  --mainColor-light: rgba(#252525, 0.5);
-  --accent: #f23d18;
-  --grey: #f4f4f4;
-  --gradient: rgba(#98c3e8, 0.2);
-}
 
-// для спользования режима RGBA
 $blue-1: #1f3f68;
 $blue-2: #316099;
 $blue-3: #356ead;
@@ -35,6 +27,3 @@ $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
-
-// <Переменные контента>
-$modalWidth: 490px;

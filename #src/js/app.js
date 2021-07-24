@@ -51,8 +51,7 @@ const removeValid = (node) => {
   node.classList.remove('valid');
 }
 
-
 const parallaxInstance = new Parallax(scene);
 
-@@include('files/script.js', {})
 
+@@include('files/script.js', {})
